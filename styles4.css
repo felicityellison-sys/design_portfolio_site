@@ -1153,12 +1153,14 @@ body {
 
 .form-success {
     display: none;
+    text-align: left;
 }
 
 .form-success p {
     font-size: 16px;
     color: var(--text-color);
-    font-weight: 700;
+    font-weight: 600;
+    margin: 0;
 }
 
 /* Footer */
