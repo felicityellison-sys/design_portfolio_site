@@ -1045,7 +1045,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 48px;
-    align-items: center;
+    align-items: start;
     margin-bottom: 64px;
 }
 
@@ -1153,6 +1153,8 @@ body {
 
 .form-success {
     display: none;
+    min-height: clamp(36px, 5vw, 56px);
+    align-items: center;
 }
 
 .form-success p {
