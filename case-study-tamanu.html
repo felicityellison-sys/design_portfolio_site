@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicity Ellison - Senior Product Designer</title>
+    <link rel="icon" href="assets/Favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Caveat:wght@400;500;600;700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles4.css">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo">Felicity Ellison</a>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2"></path>
+                    <path d="M12 20v2"></path>
+                    <path d="m4.93 4.93 1.41 1.41"></path>
+                    <path d="m17.66 17.66 1.41 1.41"></path>
+                    <path d="M2 12h2"></path>
+                    <path d="M20 12h2"></path>
+                    <path d="m6.34 17.66-1.41 1.41"></path>
+                    <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg>
+                <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+        <nav class="nav">
+            <a href="index.html#work">Work</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main class="case-study">
+        <section class="case-study-hero">
+            <div class="case-study-hero-content">
+                <a href="index.html" class="back-link">← Back</a>
+                <h1 class="case-study-title">Tamanu EMR<br>Scheduling</h1>
+                <h2 class="case-study-subtitle">Replacing complex paper-based appointment systems in low-resource hospitals with a flexible unified UI</h2>
+            </div>
+            <div class="case-study-hero-image">
+                <img src="assets/tamanu/frames/outpatient_and_location.png" alt="Tamanu scheduling interface">
+            </div>
+        </section>
+
+        <section class="case-study-overview">
+            <div class="overview-content">
+                <h3>Case study overview</h3>
+                <p>How I redesigned an underperforming MVP scheduling feature into an intuitive system that handles three fundamentally different scheduling needs under one unified umbrella.</p>
+            </div>
+            <div class="overview-meta">
+                <div class="meta-column">
+                    <div class="meta-item">
+                        <h3>Deliverables</h3>
+                        <ul>
+                            <li>Design research</li>
+                            <li>Low fidelity wireframes</li>
+                            <li>High fidelity mockup</li>
+                            <li>Prototypes & user flows</li>
+                            <li>User testing & iteration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="meta-column">
+                    <div class="meta-item">
+                        <h3>Role</h3>
+                        <p>Product Designer</p>
+                    </div>
+                    <div class="meta-item">
+                        <h3>Timeframe</h3>
+                        <p>8 weeks</p>
+                    </div>
+                </div>
+                <div class="meta-column">
+                    <div class="meta-item">
+                        <h3>Team</h3>
+                        <ul>
+                            <li>Product Owner x 1</li>
+                            <li>Engineers x 3</li>
+                            <li>Testers x 2</li>
+                        </ul>
+                    </div>
+                    <div class="meta-item">
+                        <h3>Status</h3>
+                        <p>Shipped</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Context & Challenges</h2>
+            <div class="context-layout">
+                <div class="context-content">
+                    <p>Tamanu is an open-source Electronic Medical Record system deployed across hospitals and clinics in remote and low-income countries. It handles patient health records, admissions, labs, imaging, medications, and more. Scheduling was identified as a gap in the current feature set.</p>
+
+                    <p>In these settings, clinical appointments and theatre bookings are still largely paper-based. Patient appointments are managed with handwritten ticket systems, wall calendars, and physical logbooks. Some facilities had adopted Tamanu's existing MVP scheduling feature, but adoption was low as the feature was clunky, overly simple, and missed critical workflows.</p>
+
+                    <p>The overarching main challenge was that the system needed to handle multiple competing appointment types for the varying needs of different clinics and hospitals. Those included:</p>
+
+                    <div class="challenge-points">
+                        <div class="challenge-point">
+                            <h3>1. Facility scheduling needs differ greatly between entities.</h3>
+                            <p>Facilities had different scheduling needs for clinics, clinicians, and specific physical locations such as beds in wards or operating theatres. For example, a clinic could have overlapping appointment times, but a theatre bed could not.</p>
+                        </div>
+                        <div class="challenge-point">
+                            <h3>2. The feature needed to handle more than two axes of information.</h3>
+                            <p>For outpatient appointments, the ability to view appointments across multiple clinics or clinicians for the day was necessary. For location bookings, there was a need to view multiple locations across multiple days for planning purposes, but also see granular location details for operational purposes.</p>
+                        </div>
+                        <div class="challenge-point">
+                            <h3>3. Clinical staff need flexibility, speed and clarity all at once.</h3>
+                            <p>A receptionist managing a waiting room needs to glance at a screen and immediately know who's here, who's next and who hasn't arrived. Staff managing location bookings need to move appointments around quickly without accidentally double-booking.</p>
+                        </div>
+                    </div>
+
+                    <p><strong>The fundamental question:</strong> How do you design a scheduling system flexible enough to handle more than two axes of information, across fundamentally different booking types, while being simple enough that a receptionist in a busy facility can quickly access the information she needs?</p>
+                </div>
+                <div class="context-figma">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 8px;" width="100%" height="100%" src="https://embed.figma.com/board/zIMd5Fibmg5Ic0bOpTr9do/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Research & Discovery</h2>
+            <div class="two-column">
+                <div class="column">
+                    <h3 class="subsection-title">Learning from the MVP's Failure</h3>
+                    <p>The most valuable research asset was the existing MVP. I audited the feature against real clinical workflows and noted the friction points. Things that came up included missing actions e.g no way to admit a patient directly from an appointment, no visual language e.g no status colours, and it only handled clinician/area views without the additional complex needs of the facility.</p>
+
+                    <h3 class="subsection-title">Competitive & Cross-Industry Analysis</h3>
+                    <p>I studied scheduling across three categories the solved analogous problems with tested patterns:</p>
+                    <ul>
+                        <li><strong>Booking systems:</strong> How other booking-specific systems handle scheduling to understand conventions and avoid reinventing patterns.</li>
+                        <li><strong>Digital calendars:</strong> Google Calendar, Outlook, Calendly for date picking, multi-axis views, and booking flows.</li>
+                        <li><strong>Project management tools:</strong> Trello, Linear, Asana for status colours, kanban-style views, and drag-and-drop reordering.</li>
+                    </ul>
+                    <p>Digital calendars had proven patterns for axis views and booking flows. Project management tools handled drag-and-drop and colour-coded status tracking.</p>
+                </div>
+                <div class="column">
+                    <h3 class="subsection-title">Understanding the Workflow Variations</h3>
+                    <p>Through conversations with clinical staff across multiple deployment sites, I mapped two distinct scheduling categories that needed to independently coexist within the one feature:</p>
+                    <ul>
+                        <li><strong>Outpatient appointments:</strong> Handles outpatient appointments in clinic settings such as eye appointments or general check-ups. A single receptionist managing appointments across multiple clinics and clinicians needs to view the day's appointments grouped by either area or clinician.</li>
+                        <li><strong>Location bookings:</strong> Handles more granular booking needs such as beds in wards or operating theatres. Staff need two distinct views: a daily view for operations, showing a single location's availability schedule (with drag-and-drop reordering as patient priority shifts), and a weekly view for planning, showing multiple locations' availability across days.</li>
+                    </ul>
+                    <p>The critical insight was that these two categories required fundamentally different axes, yet needed to live under the same scheduling umbrella.</p>
+                </div>
+            </div>
+            <div class="wireframe-grid" style="display: flex; gap: 24px; margin-top: 40px;">
+                <div style="flex: 1;">
+                    <h3 class="subsection-title" style="margin-top: 0;">Outpatient Appointments</h3>
+                    <div class="mockup-image" style="margin-top: 0;">
+                        <img class="wireframe-dark" src="assets/tamanu/outpatient_appointments_wireframe_dark.png" alt="Outpatient appointments wireframe showing clinic and clinician views">
+                        <img class="wireframe-light" src="assets/tamanu/outpatient_appointments_wireframe_light.png" alt="Outpatient appointments wireframe showing clinic and clinician views">
+                    </div>
+                </div>
+                <div style="flex: 1;">
+                    <h3 class="subsection-title" style="margin-top: 0;">Location Bookings</h3>
+                    <div class="mockup-image" style="margin-top: 0;">
+                        <img class="wireframe-dark" src="assets/tamanu/location_bookings_wireframe_dark.png" alt="Location bookings wireframe showing weekly and daily views">
+                        <img class="wireframe-light" src="assets/tamanu/location_bookings_wireframe_light.png" alt="Location bookings wireframe showing weekly and daily views">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Design Principles</h2>
+            <p class="full-width">Four design principles were established, directly derived from the research. These principles served as a filter to guide decision-making throughout the entire project:</p>
+            <div class="principles-grid">
+                <div class="principle">
+                    <svg class="principle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                    </svg>
+                    <h3>Must be faster than paper</h3>
+                    <p>If any common task takes more steps digitally than it did on paper, the design has failed.</p>
+                </div>
+                <div class="principle">
+                    <svg class="principle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 2v4"></path>
+                        <path d="M16 2v4"></path>
+                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                        <path d="M3 10h18"></path>
+                        <path d="m9 16 2 2 4-4"></path>
+                    </svg>
+                    <h3>Show the current state of the clinic.</h3>
+                    <p>The schedule should communicate the live situation at a glance. Who's waiting, who's been seen, how full the day is.</p>
+                </div>
+                <div class="principle">
+                    <svg class="principle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="9" r="7"></circle>
+                        <circle cx="15" cy="15" r="7"></circle>
+                    </svg>
+                    <h3>Treat all key workflows equally.</h3>
+                    <p>Outpatient appointments and location bookings must coexist without context-switching or configuration.</p>
+                </div>
+                <div class="principle">
+                    <svg class="principle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 3h5v5"></path>
+                        <path d="M8 3H3v5"></path>
+                        <path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"></path>
+                        <path d="m15 9 6-6"></path>
+                    </svg>
+                    <h3>Appointments should have gateways.</h3>
+                    <p>From any appointment, users should be able to view the patient record, admit the patient, reschedule, cancel, or change the status of the appointment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Exploration & Design</h2>
+            <p class="full-width">The challenge was to bridge three fundamentally different scheduling views with a visual language that made it feel like a single unified system.</p>
+
+            <div class="two-column subsection-divider" style="margin-top: 40px;">
+                <div class="column">
+                    <h3 class="subsection-title" style="margin-top: 0;">Status Colours & Icons</h3>
+                    <p>A colour-coded status system that applies consistently across every scheduling view.</p>
+                    <p>Staff can scan any view and instantly read the situation. These status colours, applied identically across outpatient appointments, daily location bookings, and weekly location bookings make the whole feature feel unified despite the different view structures.</p>
+                </div>
+                <div class="column">
+                    <h3 class="subsection-title" style="margin-top: 0;">Appointment Details</h3>
+                    <p>Clicking an appointment tile displays an appointment detail card with appointment information. Here the user can continue on with linked or parallel workflows. They can change the status of the appointment, visit the patient record, modify, cancel, create a new appointment for that patient, email the appointment, and start an inpatient or outpatient encounter. These actions create handy gateways for the user reducing clicks and cognitive load.</p>
+                </div>
+            </div>
+
+            <div class="two-column subsection-divider" style="margin-top: 48px;">
+                <div class="column">
+                    <h3 class="subsection-title" style="margin-top: 0;">Outpatient Appointments</h3>
+                    <p>The solution that worked best was a column-based list as appointment length, overlaps and end times were less of an issue than understanding the live situation - who's been seen, who's waiting to be seen and who are we still expecting to see.</p>
+                    <p>Each column represents a clinic/area or a clinician, showing that entity's appointments in a clear, colour-coded scannable list. Iconography was used to support the colour component and adhere to accessibility standards. A toggle allows the user to flip between Area or Clinician views while still viewing the same data. A persistent date picker with scrollable month rows makes jumping between days easy.</p>
+                </div>
+                <div class="column">
+                    <div class="mockup-image" style="margin-top: 0;">
+                        <img src="assets/tamanu/screens/Case study/Outpatient Appointments.png" alt="Outpatient Appointments view showing clinic columns with colour-coded appointments">
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title" style="margin-top: 48px;">Location Bookings</h3>
+            <p>Location bookings differed from outpatient appointments in that it needed two very distinct views within it.</p>
+
+            <div class="two-column" style="margin-top: 24px;">
+                <div class="column">
+                    <h4 class="subsection-title" style="margin-top: 0; font-size: 16px;">Daily View</h4>
+                    <p>The daily view needed to handle a visually clear depiction of who was booked in each location and for how long with the flexibility to move bookings to different timeslots while automatically taking into account other bookings so as to not double book a location. Drag-and-drop lets staff make these changes quickly while also reordering later bookings to accommodate.</p>
+                    <div class="mockup-image">
+                        <img src="assets/tamanu/screens/Case study/Location bookings - daily.png" alt="Location bookings daily view with drag-and-drop scheduling">
+                    </div>
+                </div>
+                <div class="column">
+                    <h4 class="subsection-title" style="margin-top: 0; font-size: 16px;">Weekly View</h4>
+                    <p>The weekly view is used for longer term planning of location bookings. Staff need to see availability across multiple days and multiple locations simultaneously as these users are managing a multitude of locations at once. This view utilises the single click to book functionality where users can click a cell to pre-fill the booking drawer.</p>
+                    <div class="mockup-image">
+                        <img src="assets/tamanu/screens/Case study/Location bookings - weekly.png" alt="Location bookings weekly view showing availability across days">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study-section no-divider">
+            <div class="two-column">
+                <div class="column">
+                    <h2>Results & Impact</h2>
+
+                    <h3 class="subsection-title">Project Outcomes</h3>
+                    <ul>
+                        <li>Clinical staff reported the scheduling view gave them a better real-time picture of clinic activity than paper</li>
+                        <li>Receptionists highlighted the benefits of the drag and drop reordering for quick on-the-go location management</li>
+                        <li>Facilities have utilised both outpatient bookings and location bookings rather than favouring one or the other proving the original user need thesis translated into the real world</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h2>Reflection & Learnings</h2>
+
+                    <h3 class="subsection-title">What I'm proud of</h3>
+                    <ul>
+                        <li>Solving the multi-axis problem fitting outpatient appointments and location bookings (with two sub-views) into one coherent feature.</li>
+                        <li>Including flow-on actions keeping users seamlessly within their natural workflows.</li>
+                        <li>Turning an incredibly complex feature into an easy tool clinics actually want to use.</li>
+                    </ul>
+
+                    <h3 class="subsection-title">What this project taught me</h3>
+                    <p>This project taught me how to be dynamic in my design process and systematically work through multiple competing workflows. Being able to create an interface where one requirement explicitly contradicts another was incredibly rewarding and made me realise that there is always a solution to the problem.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study-nav">
+            <a href="index.html" class="back-link">← Back</a>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-name-wrapper">
+                <a href="https://www.linkedin.com/in/felicity-e-42785330/" target="_blank" rel="noopener" class="linkedin-btn">
+                    LINKEDIN
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <svg class="footer-name-svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <text x="0" y="80" font-family="Inria Serif, Georgia, serif" font-size="90" font-weight="400" letter-spacing="4" fill="#EBE8E0">FELICITY</text>
+                    <text x="1000" y="80" font-family="Inria Serif, Georgia, serif" font-size="90" font-weight="400" letter-spacing="4" fill="#EBE8E0" text-anchor="end">ELLISON</text>
+                </svg>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('.nav');
+
+        menuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        });
+
+        // Theme toggle (dark/light mode)
+        const themeToggle = document.querySelector('.theme-toggle');
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+
+            // Save preference to localStorage
+            const isLightMode = document.body.classList.contains('light-mode');
+            localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+        });
+
+        // Check for saved theme preference on load (default is dark mode)
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+        } else {
+            document.body.classList.remove('light-mode');
+        }
+
+        // Hide header on scroll down, show on scroll up
+        const header = document.querySelector('.header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                header.classList.remove('header-hidden');
+                return;
+            }
+
+            if (currentScroll > lastScroll) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Scroll reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.footer-name-wrapper').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
