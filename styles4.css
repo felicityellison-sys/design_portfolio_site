@@ -1059,7 +1059,7 @@ body {
 }
 
 .contact-form {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 24px;
 }
@@ -1152,7 +1152,7 @@ body {
 }
 
 .form-success {
-    display: block;
+    display: none;
 }
 
 .form-success p {
