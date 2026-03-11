@@ -64,11 +64,6 @@
     color: #13211A;
 }
 
-.light-mode .project-card.tamanu,
-.light-mode .project-card.datatrak {
-    border-color: #13211A;
-}
-
 /* Project card background dark/light mode switching */
 .project-card .project-card-mockups-inner.bg-dark {
     display: flex;
@@ -337,7 +332,7 @@ body {
     display: inline-block;
     padding: 8px 16px;
     border: 1px solid rgba(235, 232, 224, 0.5);
-    border-radius: 50px;
+    border-radius: 0;
     font-size: 14px;
     color: var(--text-color);
     background: transparent;
@@ -421,14 +416,14 @@ body {
     overflow: visible;
     margin-bottom: 80px;
     max-width: none;
-    width: calc(75vw - 288px);
-    margin-left: calc(12.5vw + 96px);
-    margin-right: calc(12.5vw + 96px);
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     aspect-ratio: auto;
     border-radius: 0;
     display: flex;
-    flex-direction: column;
-    border: 1px solid #EBE8E0;
+    flex-direction: row;
+    border: none;
 }
 
 .project-card.tamanu .project-card-bg {
@@ -460,14 +455,16 @@ body {
 .project-card.tamanu .project-card-content {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     padding: 0;
+    width: 100%;
 }
 
 .project-card.tamanu .project-card-mockups {
     position: relative;
-    aspect-ratio: 16 / 10;
+    width: 60%;
+    aspect-ratio: 4 / 3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -480,14 +477,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #EBE8E0;
+    border: none;
     padding: 0;
-    background-size: cover;
+    background-size: 95%;
     background-position: center;
-}
-
-.light-mode .project-card.tamanu .project-card-mockups-inner {
-    border-color: #13211A;
+    background-repeat: no-repeat;
 }
 
 .project-card.tamanu .mockup-desktop {
@@ -499,16 +493,19 @@ body {
 
 .project-card.tamanu .project-card-footer {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 16px 24px 24px 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 40%;
+    padding: 48px 48px 3.5% 24px;
     background-color: #13211A;
+    gap: 24px;
 }
 
 .project-card.tamanu .project-card-footer-left {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 12px;
 }
 
 .project-card.tamanu .project-title {
@@ -534,7 +531,7 @@ body {
     gap: 8px;
     padding: 12px 24px;
     border: 1px solid #EBE8E0;
-    border-radius: 50px;
+    border-radius: 0;
     font-size: 14px;
     color: #13211A;
     background-color: #EBE8E0;
@@ -554,14 +551,14 @@ body {
     overflow: visible;
     margin-bottom: 80px;
     max-width: none;
-    width: calc(75vw - 288px);
-    margin-left: calc(12.5vw + 96px);
-    margin-right: calc(12.5vw + 96px);
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     aspect-ratio: auto;
     border-radius: 0;
     display: flex;
-    flex-direction: column;
-    border: 1px solid #EBE8E0;
+    flex-direction: row;
+    border: none;
 }
 
 .project-card.datatrak .project-card-bg {
@@ -573,14 +570,16 @@ body {
 .project-card.datatrak .project-card-content {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     padding: 0;
+    width: 100%;
 }
 
 .project-card.datatrak .project-card-mockups {
     position: relative;
-    aspect-ratio: 16 / 10;
+    width: 60%;
+    aspect-ratio: 4 / 3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -593,14 +592,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #EBE8E0;
+    border: none;
     padding: 0;
-    background-size: cover;
+    background-size: 95%;
     background-position: center;
-}
-
-.light-mode .project-card.datatrak .project-card-mockups-inner {
-    border-color: #13211A;
+    background-repeat: no-repeat;
 }
 
 .project-card.datatrak .mockup-devices {
@@ -612,16 +608,19 @@ body {
 
 .project-card.datatrak .project-card-footer {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 16px 24px 24px 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 40%;
+    padding: 48px 48px 3.5% 24px;
     background-color: #13211A;
+    gap: 24px;
 }
 
 .project-card.datatrak .project-card-footer-left {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 12px;
 }
 
 .project-card.datatrak .project-title {
@@ -647,7 +646,7 @@ body {
     gap: 8px;
     padding: 12px 24px;
     border: 1px solid #EBE8E0;
-    border-radius: 50px;
+    border-radius: 0;
     font-size: 14px;
     color: #13211A;
     background-color: #EBE8E0;
@@ -743,7 +742,7 @@ body {
     gap: 8px;
     padding: 10px 20px;
     border: 1px solid #EBE8E0;
-    border-radius: 50px;
+    border-radius: 0;
     font-size: 12px;
     color: #EBE8E0;
     text-decoration: none;
@@ -1127,7 +1126,7 @@ body {
     gap: 8px;
     padding: 12px 24px;
     border: 1px solid var(--text-color);
-    border-radius: 50px;
+    border-radius: 0;
     background-color: var(--text-color);
     color: var(--bg-color);
     font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -1237,7 +1236,7 @@ body {
     gap: 8px;
     padding: 10px 16px;
     border: 1px solid var(--text-color);
-    border-radius: 50px;
+    border-radius: 0;
     text-decoration: none;
     color: var(--text-color);
     font-size: 12px;
@@ -1512,26 +1511,33 @@ body {
     .project-card.tamanu,
     .project-card.datatrak,
     .project-card.tupaia {
+        flex-direction: column;
         aspect-ratio: auto;
         min-height: auto;
         overflow: hidden;
         margin-bottom: 32px;
-        width: calc(100vw - 48px);
-        margin-left: calc(24px - 24px);
-        margin-right: calc(24px - 24px);
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .project-card.tamanu .project-card-content,
+    .project-card.datatrak .project-card-content {
+        flex-direction: column;
     }
 
     /* Work cards mobile */
     .project-card.tamanu .project-card-mockups,
     .project-card.datatrak .project-card-mockups,
     .project-card.tupaia .project-card-mockups {
+        width: 100%;
         padding: 0;
         aspect-ratio: 4 / 3;
     }
 
     .project-card.tamanu .mockup-desktop,
     .project-card.datatrak .mockup-devices {
-        width: 95%;
+        width: 80%;
         max-width: none;
     }
 
@@ -1543,10 +1549,11 @@ body {
     .project-card.tamanu .project-card-footer,
     .project-card.datatrak .project-card-footer,
     .project-card.tupaia .project-card-footer {
-        padding: 16px 24px 20px 24px;
+        width: 100%;
+        padding: 0 24px 24px 12px !important;
         flex-direction: column;
         align-items: flex-start;
-        gap: 12px;
+        gap: 16px;
     }
 
     .about-grid {
