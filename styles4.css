@@ -1093,8 +1093,14 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--text-color);
-    box-shadow: 0 0 0 2px rgba(235, 232, 224, 0.1);
+    border-color: #C0FA9B;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.light-mode .form-group input:focus,
+.light-mode .form-group textarea:focus {
+    border-color: #53896E;
 }
 
 .form-group textarea {
@@ -1135,14 +1141,12 @@ body {
 
 .form-success {
     display: none;
-    padding: 24px;
-    background-color: rgba(198, 229, 43, 0.2);
-    border-radius: 8px;
 }
 
 .form-success p {
     font-size: 16px;
     color: var(--text-color);
+    font-weight: 700;
 }
 
 /* Footer */
