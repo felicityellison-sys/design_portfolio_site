@@ -52,16 +52,18 @@
 .light-mode .project-card.tamanu .case-study-link,
 .light-mode .project-card.datatrak .case-study-link,
 .light-mode .project-card.tupaia .case-study-link {
-    color: #EBE8E0;
-    background-color: #13211A;
-    border-color: #13211A;
+    color: #EBE8E0 !important;
+    background-color: #13211A !important;
+    border-color: #13211A !important;
+    opacity: 1 !important;
 }
 
 .light-mode .project-card.tamanu .case-study-link:hover,
 .light-mode .project-card.datatrak .case-study-link:hover,
 .light-mode .project-card.tupaia .case-study-link:hover {
-    background-color: transparent;
-    color: #13211A;
+    background-color: transparent !important;
+    color: #13211A !important;
+    border-color: #13211A !important;
 }
 
 /* Project card background dark/light mode switching */
@@ -544,6 +546,7 @@ body {
 .project-card.tamanu .case-study-link:hover {
     background-color: transparent;
     color: #EBE8E0;
+    border-color: #EBE8E0;
 }
 
 /* DataTrak card specific styles */
@@ -659,6 +662,7 @@ body {
 .project-card.datatrak .case-study-link:hover {
     background-color: transparent;
     color: #EBE8E0;
+    border-color: #EBE8E0;
 }
 
 /* Tupaia card specific styles */
@@ -795,7 +799,7 @@ body {
 
 .project-card .case-study-link:hover {
     opacity: 1;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .project-card-mockups {
@@ -1684,11 +1688,6 @@ img[src=""] {
 /* Case study link hover */
 .case-study-link {
     display: inline-block;
-    transition: transform 0.2s ease;
-}
-
-.case-study-link:hover {
-    transform: translateX(4px);
 }
 
 /* Profile photo subtle animation */
