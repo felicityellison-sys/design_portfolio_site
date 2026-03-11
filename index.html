@@ -194,7 +194,7 @@
             <div class="contact-section">
                 <h2 class="section-title">Contact</h2>
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mlgpjqlb" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -308,8 +308,20 @@
 
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            contactForm.style.display = 'none';
-            formSuccess.style.display = 'block';
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    contactForm.style.display = 'none';
+                    formSuccess.style.display = 'block';
+                    contactForm.reset();
+                }
+            });
         });
     </script>
 </body>
