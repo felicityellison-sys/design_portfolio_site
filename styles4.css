@@ -1273,6 +1273,13 @@ body {
     height: auto;
 }
 
+.copyright {
+    text-align: left;
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 0;
+}
+
 /* Tablet styles */
 @media (max-width: 1024px) {
     .header {
